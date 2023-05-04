@@ -9,7 +9,7 @@ import viewsRouter from './routes/views.router.js'
 
 const app = express();
 const PORT = process.env.PORT || 808
-const server = app.listen(PORT, () => console.log('listening on 8080'))
+const server = app.listen(PORT, () => console.log(`listening on ${PORT}`))
 
 app.use(express.static(`${__dirname}/public`))
 
