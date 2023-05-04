@@ -5,8 +5,11 @@ import { Server } from "socket.io";
 import __dirname from "./utils.js";
 import viewsRouter from './routes/views.router.js'
 
+
+
 const app = express();
-const server = app.listen(8088, () => console.log('listening on 8080'))
+const PORT = process.env.PORT || 808
+const server = app.listen(PORT, () => console.log('listening on 8080'))
 
 app.use(express.static(`${__dirname}/public`))
 
